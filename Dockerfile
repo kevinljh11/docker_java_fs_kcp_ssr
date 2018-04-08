@@ -14,7 +14,7 @@ RUN apk update \
     && unzip -o fs_server.zip -d /fs \ 
     && apk del  wget  unzip
 
-COPY config.json /config.json
+#COPY config.json /config.json
 COPY dns.conf /ssr/shadowsocks/dns.conf
 
 #EXPOSE 150/udp 150/tcp
