@@ -4,9 +4,9 @@ RUN apk update \
     && rm -rf /var/cache/apk/* \
     && mkdir /ssr \
     && cd /ssr \
-    && wget --no-check-certificate https://github.com/breakwa11/shadowsocks/archive/manyuser.zip -O /tmp/manyuser.zip \
-    && unzip -d /tmp /tmp/manyuser.zip \
-    && mv /tmp/shadowsocksr-manyuser/shadowsocks /ssr/shadowsocks \
+    && wget --no-check-certificate https://github.com/shadowsocksrr/shadowsocksr/archive/akkariiin/dev.zip -O /tmp/dev.zip \
+    && unzip -d /tmp /tmp/dev.zip \
+    && mv /tmp/shadowsocksr-akkariiin-dev/shadowsocks /ssr/shadowsocks \
     && rm -rf /tmp/* \
     && cd / \
     && unzip -o finalspeed_server.zip -d /fs \ 
