@@ -17,8 +17,8 @@ RUN apk update \
 #COPY config.json /config.json
 COPY dns.conf /ssr/shadowsocks/dns.conf
 
-#EXPOSE 150/udp 150/tcp
-#EXPOSE 8765
+EXPOSE 17519/udp
+EXPOSE 17520/tcp
 #EXPOSE 8766
 
 ADD start.sh /start.sh
