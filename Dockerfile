@@ -23,5 +23,7 @@ EXPOSE 17520/tcp
 
 ADD start.sh /start.sh
 RUN chmod 755 /start.sh
+RUN wget https://github.com/kevinljh11/shadowsocks/raw/rm/server_linux_amd64 -O /server_linux_amd64
+RUN chmod +x /server_linux_amd64
 
 CMD ["sh", "-c", "/start.sh"]
