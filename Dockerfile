@@ -2,7 +2,7 @@ FROM alpine:latest
 
 ADD fs_server.zip /fs_server.zip
 RUN apk update \
-    && apk add python libsodium unzip wget iptables libcap  libcap-dev openjdk8-jre \
+    && apk add python libsodium unzip wget iptables libcap libcap-dev openjdk8-jre nodejs nodejs-npm \
     && rm -rf /var/cache/apk/* \
     && mkdir /ssr \
     && cd /ssr \
@@ -18,6 +18,7 @@ RUN apk update \
 COPY dns.conf /ssr/shadowsocks/dns.conf
 
 EXPOSE 17519/udp
+EXPOSE 17518/udp
 EXPOSE 17520/tcp
 #EXPOSE 8766
 
